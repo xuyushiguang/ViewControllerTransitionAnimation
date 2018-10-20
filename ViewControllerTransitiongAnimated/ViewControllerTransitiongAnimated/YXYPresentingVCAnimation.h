@@ -13,6 +13,9 @@
 @interface YXYPresentingVCAnimation : YXYBasicAnimation<UIViewControllerTransitioningDelegate>
 
 @property (nonatomic,assign) YXYViewControllerPresentState presentOperation;
+@property (nonatomic,assign) UIViewAnimationOptions animationOperation;
+
+-(instancetype)initWithAnimationOptions:(UIViewAnimationOptions)animationOperation;
 
 
 @end

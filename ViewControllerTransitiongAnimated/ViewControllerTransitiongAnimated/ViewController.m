@@ -33,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"viewcontroller";
+    self.view.backgroundColor = [UIColor whiteColor];
     UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
     bt.backgroundColor = [UIColor redColor];
     bt.frame = CGRectMake(100, 100, 100, 50);
@@ -66,7 +67,8 @@
 -(void)actionForButton2
 {
     PresentViewController *vc = [[PresentViewController alloc] init];
-    present = [YXYPresentingVCAnimation new];
+    present = [[YXYPresentingVCAnimation alloc] initWithAnimationOptions:UIViewAnimationOptionTransitionCurlUp];
+    present.animateInterval = 2.5f;
     vc.transitioningDelegate = present;
     [self presentViewController:vc animated:YES completion:nil];
 }
